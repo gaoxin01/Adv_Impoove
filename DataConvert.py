@@ -73,7 +73,7 @@ def saveImgAndLabel(tag):
         label = getLabelType(i, labelX)
         name = str(i) + '_' + label + '.png'
         img.save(saveDir + "/" + name, "png")
-        f = open(cifar,'a')   # 读取label.txt文件，没有则创建，‘a’表示再次写入时不覆盖之前的内容
+        f = open(labelTxt,'a')   # 读取label.txt文件，没有则创建，‘a’表示再次写入时不覆盖之前的内容
         f.write(str(saveDir) + "/" + str(name) + ' ' + str(labelX[i]))
         f.write('\n')               # 实现换行的功能
 
@@ -84,7 +84,7 @@ if __name__ == "__main__":
     # 转换生成的图片存放的地址
     image = "/home/gao/PycharmProjects/Adv_Improve/data/image/"
     # 转换生成的标签文件
-    cifar = 'dir/cifar.txt'
+    labelTxt = 'dir/cifar.txt'
     # 如果这些文件存在先删除
     if not os.path.exists('dir/'):
         os.makedirs('dir/')
