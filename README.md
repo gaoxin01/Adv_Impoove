@@ -18,3 +18,12 @@ The tag file generated in the previous step is stored under the `dir` folder, an
 Modify `label` to `label = "Address of the total tag file of the database you generated in the previous step"`.  
 run `labelProcess.py`.  
 Through this program, we get the tag file `train0.txt` of the first category and the tag file `train1.txt` of the second category from the total tag file of a database, and the tag file `test0_1.txt` of the required two-class test set.
+
+## Train the model and use the method of generating against the sample to improve the model effect
+In the program, it is set to generate the anti-samples 50 times. Each time the anti-samples are generated, the samples are added to the existing training set re-training model, and the total iteration is 50 times.  
+In the terminal, type `python Adv_Improve.py` to run `Adv_Improve.py`.
+
+## Train the model through all data
+Because the same database is used, our method does not expand the data set by initially generating new data separately. However, some anti-samples are modified during the training process, which is different from the original method using gan. Training after the data set. So we need to compare the effects of the models directly trained without this method.  
+Regular training model through this program
+run `normal.py`
