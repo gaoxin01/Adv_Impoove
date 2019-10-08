@@ -1,7 +1,7 @@
 import os
 
 # cifar10数据库的标签
-cifar = "dir/cifar.txt"
+label = "dir/cifar.txt"
 # 训练集的标签
 Train = 'dir/Train.txt'
 # 测试集的标签
@@ -33,7 +33,7 @@ if os.path.exists(testLabel):
     os.remove(testLabel)
 
 # 将cifar10标签60000标签分成训练集和测试集两个txt文件
-fc = open(cifar, 'r')
+fc = open(label, 'r')
 fc_list = fc.readlines()
 fc.close()
 f = open(Train, 'a')
