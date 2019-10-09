@@ -23,11 +23,11 @@ Through this program, we get the tag file `train0.txt` of the first category and
 In the program, it is set to generate the anti-samples 50 times. Each time the anti-samples are generated, the samples are added to the existing training set re-training model, and the total iteration is 50 times.  
 The generated pictures are placed in the `fooling_img` folder under `data`, the first kind of pictures are placed in the `fooling_img` `class0` folder, and the second kind of pictures are placed in the `fooling_img` `Class1` folder.  
 The `fooling_img` folder is automatically generated, but two paths need to be modified because the path of the `data` folder will be different.  
-Modify `gen_class0` to `gen_class0 = "Your data folder directory + /fooling_img/class0/"`  
-Modify `gen_class1` to `gen_class1 = "Your data folder directory + /fooling_img/class1/"`  
+Modify `gen_class0` to `gen_class0 = "Your data folder directory + /fooling_img/class0/"`.  
+Modify `gen_class1` to `gen_class1 = "Your data folder directory + /fooling_img/class1/"`.  
 In the terminal, type `python Adv_Improve.py` to run `Adv_Improve.py`.  
 
 ## Train the model through all data
 Because the same database is used, our method does not expand the data set by initially generating new data separately. However, some anti-samples are modified during the training process, which is different from the original method using gan. Training after the data set. So we need to compare the effects of the models directly trained without this method.  
 Regular training model through this program.  
-run `normal.py`
+run `normal.py`.  
