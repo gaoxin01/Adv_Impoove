@@ -90,8 +90,8 @@ if __name__ == "__main__":
         os.makedirs('dir/')
     if os.path.exists(image):
         shutil.rmtree(image)
-    if os.path.exists(cifar):
-        os.remove(cifar)
+    if os.path.exists(labelTxt):
+        os.remove(labelTxt)
     for i in range(1, 7):
         if i == 6:
             saveImgAndLabel('test')
