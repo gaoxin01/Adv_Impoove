@@ -30,4 +30,4 @@ In the terminal, type `python Adv_Improve.py` to run `Adv_Improve.py`.
 ## Train the model through all data
 Because the same database is used, our method does not expand the data set by initially generating new data separately. However, some anti-samples are modified during the training process, which is different from the original method using gan. Training after the data set. So we need to compare the effects of the models directly trained without this method.  
 Regular training model through this program.  
-run `normal.py`.  
+In the terminal, type `python normal.py` to run `normal.py`.  
