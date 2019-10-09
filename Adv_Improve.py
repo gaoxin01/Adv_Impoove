@@ -192,7 +192,9 @@ for k in range(N):
         shutil.rmtree(gen_class0)  # 递归删除文件夹
     if os.path.exists(gen_class1):
         shutil.rmtree(gen_class1)  # 递归删除文件夹
-
+    if os.path.exists('result/'):
+        os.makedirs('result/')     # 存放结果折线图
+        
     # 删除存放生成的图片的地址的txt文件
     if os.path.exists('dir/retrain.txt'):
         os.remove('dir/retrain.txt')
@@ -464,9 +466,6 @@ for k in range(N):
             write_file.write(gen_class1 + file_list[current_line] + '\n')
         # 关闭文件
         write_file.close()
-
-    if os.path.exists('result/'):
-        os.makedirs('result/')
         
     plt.plot(testAp)
     plt.savefig('result/testAp' + str(k) + '.png')
