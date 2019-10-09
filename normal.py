@@ -83,7 +83,7 @@ def test():
         print('Saving..')
         if not os.path.isdir('checkpoint'):
             os.mkdir('checkpoint')
-        torch.save(net.state_dict(), 'checkpoint/model.pkl')
+        torch.save(net.state_dict(), 'checkpoint/modelNorm.pkl')
         BEST_ACC = acc
 
 parser = argparse.ArgumentParser(description='PyTorch Training')
