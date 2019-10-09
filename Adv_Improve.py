@@ -465,15 +465,18 @@ for k in range(N):
         # 关闭文件
         write_file.close()
 
+    if os.path.exists('result/'):
+        os.makedirs('result/')
+        
     plt.plot(testAp)
-    plt.savefig('testAp' + str(k) + '.png')
+    plt.savefig('result/testAp' + str(k) + '.png')
     plt.close()
     plt.plot(valAp)
-    plt.savefig('valAp' + str(k) + '.png')
+    plt.savefig('result/valAp' + str(k) + '.png')
     plt.close()
     plt.plot(trainNum)
-    plt.savefig('trainNum' + str(k) + '.png')
+    plt.savefig('result/trainNum' + str(k) + '.png')
     plt.close()
     plt.plot(errNum)
-    plt.savefig('errNum' + str(k) + '.png')
+    plt.savefig('result/errNum' + str(k) + '.png')
     plt.close()
