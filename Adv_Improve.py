@@ -192,8 +192,6 @@ for k in range(N):
         shutil.rmtree(gen_class0)  # 递归删除文件夹
     if os.path.exists(gen_class1):
         shutil.rmtree(gen_class1)  
-    if os.path.exists('result/'):
-        shutil.rmtree('result/')  
         
     # 删除存放生成的图片的地址的txt文件
     if os.path.exists('dir/retrain.txt'):
@@ -201,7 +199,6 @@ for k in range(N):
 
     os.makedirs('data/fooling_img/class0')
     os.makedirs('data/fooling_img/class1')
-    os.makedirs('result/')         # 存放结果折线图
 
     # 创建存放生成的图片的地址的txt文件
     f = open('dir/retrain.txt', 'w')
@@ -468,6 +465,9 @@ for k in range(N):
         # 关闭文件
         write_file.close()
         
+    if os.path.exists('result/'):
+        os.makedirs('result/')        
+    
     plt.plot(testAp)
     plt.savefig('result/testAp' + str(k) + '.png')
     plt.close()
