@@ -465,7 +465,7 @@ for k in range(N):
         # 关闭文件
         write_file.close()
         
-    if os.path.exists('result/'):
+    if not os.path.exists('result/'):
         os.makedirs('result/')        
     
     plt.plot(testAp)
