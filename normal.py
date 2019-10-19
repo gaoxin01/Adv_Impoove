@@ -133,7 +133,7 @@ for k in range(N):
     trainset = MyDataset(trainLabel, transform)
     trainloader = torch.utils.data.DataLoader(trainset, batch_size=128, shuffle=True, num_workers=2)
     testset = MyDataset(testLabel, transform)
-    testloader = torch.utils.data.DataLoader(testset, batch_size=100, shuffle=False, num_workers=2)
+    testloader = torch.utils.data.DataLoader(testset, batch_size=100, shuffle=True, num_workers=2)
     classes = ('cat', 'dog')
 
     # Model
